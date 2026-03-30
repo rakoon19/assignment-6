@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import About from './Components/About/About'
+import Pricing from './Components/Pricing/Pricing'
 import Testimonial from './Components/Testimonial/Testimonial'
 import Footer from './Components/Footer/Footer'
 
@@ -16,9 +17,9 @@ function App() {
     {/* <Feature></Feature>
     <FeatureCard></FeatureCard>
     <Step></Step>
-    <StepCard></StepCard>
+    <StepCard></StepCard> */}
     <Pricing></Pricing>
-    <PricingCard></PricingCard> */}
+    {/* <PricingCard></PricingCard>  */}
     <Testimonial></Testimonial>
     <Footer></Footer>
     </>
