@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "header": "Product",
+    "links": [
+      { "id": 101, "name": "Features", "path": "/features" },
+      { "id": 102, "name": "Pricing", "path": "/pricing" },
+      { "id": 103, "name": "Templates", "path": "/templates" },
+      { "id": 104, "name": "Integrations", "path": "/integrations" }
+    ]
+  },
+  {
+    "id": 2,
+    "header": "Company",
+    "links": [
+      { "id": 201, "name": "About", "path": "/about" },
+      { "id": 202, "name": "Blog", "path": "/blog" },
+      { "id": 203, "name": "Careers", "path": "/careers" },
+      { "id": 204, "name": "Press", "path": "/press" }
+    ]
+  },
+  {
+    "id": 3,
+    "header": "Resources",
+    "links": [
+      { "id": 301, "name": "Documentation", "path": "/docs" },
+      { "id": 302, "name": "Help Center", "path": "/help" },
+      { "id": 303, "name": "Community", "path": "/community" },
+      { "id": 304, "name": "Contact", "path": "/contact" }
+    ]
+  }
+]

@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import About from './Components/About/About'
 import Testimonial from './Components/Testimonial/Testimonial'
+import Footer from './Components/Footer/Footer'
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     <Pricing></Pricing>
     <PricingCard></PricingCard> */}
     <Testimonial></Testimonial>
-    {/* <Footer></Footer> */}
+    <Footer></Footer>
     </>
   )
 }
