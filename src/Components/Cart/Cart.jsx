@@ -1,5 +1,6 @@
 import CartItem from "./CartItem";
 import { LuShoppingCart } from "react-icons/lu";
+import { toast } from "react-toastify";
 
 const Cart = ({ cart = [], setCart}) => {
     const handleRemove = (id) => {
@@ -42,8 +43,14 @@ const Cart = ({ cart = [], setCart}) => {
                     </div>
 
                     <button 
-                        onClick={() => alert('Proceeding to checkout...')}
-                        className="w-full py-4 rounded-full bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white font-bold text-lg shadow-lg"
+                        onClick={() => {
+                            toast.success(`Payment Proceeding`, {
+                                icon: "🛒",
+                                position: "bottom-right",
+                                theme: "colored" // Use this to make it solid purple/green
+                            });
+                        }}
+                        className="w-full py-4 rounded-full bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white font-bold text-lg shadow-lg hover:opacity-90 transition-opacity"
                     >
                         Proceed To Checkout
                     </button>

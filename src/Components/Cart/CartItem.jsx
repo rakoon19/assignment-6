@@ -1,4 +1,4 @@
-
+import { toast } from "react-toastify";
 const CartItem = ({ item, handleRemove }) => {
     console.log(item)
     return (
@@ -18,15 +18,17 @@ const CartItem = ({ item, handleRemove }) => {
             </div>
 
             <div>
-                <button 
-                    onClick={() => {
-                        handleRemove(item.id);
-                        alert('Product removed from cart!');
-                    }}
-                    className='text-[#F43F5E] font-semibold hover:text-red-700 transition-colors text-sm px-2'
-                >
-                    Remove
-                </button>
+            <button 
+                onClick={() => {
+                    handleRemove(item.id);
+                    toast.error(`${item.name} removed from the cart!`, {
+                    icon: "🛒"
+                        });
+                }}
+                className='text-[#F43F5E] font-semibold hover:text-red-700 transition-colors text-sm px-2'
+            >
+                Remove
+            </button>
             </div>
         </div>
     );

@@ -8,6 +8,7 @@ import Step from './Components/Step/Step'
 import Pricing from './Components/Pricing/Pricing'
 import Testimonial from './Components/Testimonial/Testimonial'
 import Footer from './Components/Footer/Footer'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
@@ -39,6 +40,12 @@ function App() {
       <Testimonial />
 
       <Footer />
+
+      <ToastContainer 
+        position="bottom-right" 
+        autoClose={3000} 
+        theme="colored" 
+      />
     </>
   )
 }

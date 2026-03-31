@@ -1,12 +1,15 @@
 import FeatureCard from "./FeatureCard";
 import Cart from "../Cart/Cart";
 import featurecard from '../../../JSON/featurecard.json'
+import { toast } from 'react-toastify';
 
 const Feature = ({ setFeatureBTN, featureBTN, cart, setCart }) => {
 
     const handleBuyNow = (card) => {
         setCart([...cart, card]);
-        alert('Product added to cart!');
+        toast.success(`${card.name} added to cart!`, {
+        icon: "🛒"
+    });
     }
 
     return (
