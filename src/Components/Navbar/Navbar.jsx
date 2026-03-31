@@ -3,57 +3,88 @@ import NavItems from './NavItems';
 import PrimaryButton from '../ui Components/PrimaryButton';
 import { LuShoppingCart, LuMenu, LuX } from "react-icons/lu";
 
-const Navbar = () => {
+const Navbar = ({ cart = [], setFeatureBTN }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const navItems = ["Products", "Features", "Pricing", "Testimonials", "FAQ"];
+
+    const navItems = [
+        { name: "Products", id: "feature-section" },
+        { name: "Features", id: "about-section" },
+        { name: "Pricing", id: "pricing-section" },
+        { name: "Testimonials", id: "testimonial-section" },
+        { name: "FAQ", id: "faq-section" }
+    ];
+
+    const handleNavClick = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        } else {
+            console.warn(`Element with id ${sectionId} not found.`);
+        }
+        setIsOpen(false); 
+    };
+
+    const handleCartClick = () => {
+        setFeatureBTN('cart');
+        handleNavClick("feature-section");
+    };
 
     return (
-        <div className='sticky top-0 z-50 bg-white border-b border-gray-200'>
-            <div className='mx-auto px-4 md:px-12 lg:px-50 flex justify-between py-4'>
+        <nav className='sticky top-0 z-50 bg-white border-b border-gray-200'>
+            <div className='max-w-7xl mx-auto px-4 md:px-12 flex justify-between py-4 items-center'>
                 
-                <h2 className='text-4xl font-bold'>DigiTools</h2>
-                
-                <ul className='hidden md:flex gap-8 self-center justify-center'>
+                <h2 className='text-2xl md:text-3xl font-bold'>DigiTools</h2>
+
+                <ul className='hidden md:flex gap-8'>
                     {navItems.map((item, index) => (
-                        <NavItems item={item} key={index} />
+                        <NavItems 
+                            key={index}
+                            item={item.name}
+                            id={item.id}
+                            handleNavClick={handleNavClick}
+                        />
                     ))}
                 </ul>
-                
-                <div className='hidden md:flex self-center justify-center items-center gap-4'>
-                    <LuShoppingCart size={20} className='w-5 h-5'/>
-                    <button>Login</button>
+
+                <div className='hidden md:flex items-center gap-6'>
+                    <button onClick={handleCartClick} className="relative">
+                        <LuShoppingCart className='w-6 h-6'/>
+                        {cart.length > 0 && (
+                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full">
+                                {cart.length}
+                            </span>
+                        )}
+                    </button>
+                    <button className='hover:text-blue-600 transition-colors'>Login</button>
                     <PrimaryButton btnText='Get Started' />
                 </div>
 
-                <button 
-                    onClick={() => setIsOpen(!isOpen)}
-                    className='md:hidden self-center'
-                >
-                    {isOpen ? <LuX size={28} /> : <LuMenu size={28} />}
-                </button>
+                <div className="flex gap-4 md:hidden items-center">
+                    <button onClick={handleCartClick} className="relative">
+                        <LuShoppingCart size={24} />
+                    </button>
+                    <button onClick={() => setIsOpen(!isOpen)}>
+                        {isOpen ? <LuX size={28} /> : <LuMenu size={28} />}
+                    </button>
+                </div>
             </div>
 
             {isOpen && (
-                <div className='md:hidden bg-white border-t border-gray-200'>
-                    <ul className='flex flex-col py-4'>
+                <div className='md:hidden bg-white border-t border-gray-200 absolute w-full left-0 shadow-md'>
+                    <ul className='flex flex-col py-2'>
                         {navItems.map((item, index) => (
-                            <li key={index} className='px-4 py-3 hover:bg-gray-50'>
-                                <a href="">{item}</a>
-                            </li>
+                            <NavItems 
+                                key={index}
+                                item={item.name}
+                                id={item.id}
+                                handleNavClick={handleNavClick}
+                                mobile={true}
+                            />
                         ))}
                     </ul>
-                    
-                    <div className='flex flex-col gap-3 px-4 pb-4 border-t border-gray-100 pt-4'>
-                        <button className='flex items-center gap-2 py-2'>
-                            <LuShoppingCart size={20} />
-                            Cart
-                        </button>
-                        <button className='py-2 text-left'>Login</button>
-                        <PrimaryButton btnText='Get Started' />
-                    </div>
                 </div>
             )}
-        </div>
+        </nav>
     );
 };
 

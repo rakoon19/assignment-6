@@ -1,6 +1,7 @@
 import banner from '/public/assets/banner.png'
 import PrimaryButton from '../ui Components/PrimaryButton'
 import { TbLivePhotoFilled } from "react-icons/tb";
+import { LuPlay } from "react-icons/lu";
 
 const Hero = () => {
 return (
@@ -34,8 +35,15 @@ return (
                     </div>
                     
                     <div className='flex flex-col sm:flex-row gap-3 md:gap-4 mt-2 md:mt-4 w-full sm:w-auto'>
+
                         <PrimaryButton btnText={'Explore Products'} />
-                        <PrimaryButton btnText={'Watch Demo'} />
+
+                        <button className="flex items-center gap-2 px-6 py-3 border border-purple-500 rounded-full text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-colors duration-300">
+                        <LuPlay size={18} strokeWidth={2.5} />
+                        
+                        <span>Watch Demo</span>
+                        </button>
+
                     </div>
                 </div>
             </div>

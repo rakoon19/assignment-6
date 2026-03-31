@@ -2,7 +2,7 @@ const StepCard = ({ card }) => {
 return (
         <div className='relative flex flex-col items-center justify-center text-center p-6 md:p-8 lg:p-10 w-full max-w-full md:max-w-95 bg-white border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow'>
 
-            <span className="absolute top-4 right-4 md:top-6 md:right-6 flex items-center justify-center text-xs md:text-[14px] w-7 h-7 md:w-8 md:h-8 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#A855F7] text-white font-bold shrink-0">
+            <span className="absolute top-4 right-4 md:top-6 md:right-6 flex items-center justify-center text-xs md:text-[14px] w-7 h-7 md:w-8 md:h-8 rounded-full bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white font-bold shrink-0">
                 { card.serialNo }
             </span>
 

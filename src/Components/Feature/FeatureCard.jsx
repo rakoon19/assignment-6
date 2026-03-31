@@ -21,7 +21,7 @@ const FeatureCard = ({ card, handleBuyNow, cart }) => {
                 return 'bg-gray-100 text-gray-600';
         }
     };
-
+    console.log(card.icon)
     const handleClick = () => {
         if (isInCart) return; 
         handleBuyNow(card);

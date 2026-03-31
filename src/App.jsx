@@ -1,29 +1,44 @@
-// import { useState } from 'react'
 import './App.css'
 import { useState } from 'react'
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import About from './Components/About/About'
 import Feature from './Components/Feature/Feature'
-import Cart from './Components/Cart/Cart'
 import Step from './Components/Step/Step'
 import Pricing from './Components/Pricing/Pricing'
 import Testimonial from './Components/Testimonial/Testimonial'
 import Footer from './Components/Footer/Footer'
 
-
 function App() {
+
   const [featureBTN, setFeatureBTN] = useState('products')
+  const [cart, setCart] = useState([])
+
   return (
     <>
-    <Navbar></Navbar>
-    <Hero></Hero>
-    <About></About>
-    <Feature setFeatureBTN={ setFeatureBTN } featureBTN={ featureBTN }></Feature>
-    <Step></Step> 
-    <Pricing></Pricing>
-    <Testimonial></Testimonial>
-    <Footer></Footer>
+      <Navbar 
+        cart={cart} 
+        setFeatureBTN={setFeatureBTN}
+      />
+
+      <Hero />
+
+      <About />
+
+      <Feature 
+        setFeatureBTN={setFeatureBTN} 
+        featureBTN={featureBTN}
+        cart={cart}
+        setCart={setCart}
+      />
+
+      <Step />
+
+      <Pricing />
+
+      <Testimonial />
+
+      <Footer />
     </>
   )
 }

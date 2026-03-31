@@ -4,7 +4,7 @@ import pricing from '../../../JSON/pricing.json'
 
 const Pricing = () => {
     return (
-        <div className="flex flex-col gap-8 md:gap-12 lg:gap-15 py-12 md:py-20 lg:py-30 text-center px-6 md:px-12">
+        <div id="pricing-section" className="flex flex-col gap-8 md:gap-12 lg:gap-15 py-12 md:py-20 lg:py-30 text-center px-6 md:px-12">
 
             <PricingHeader></PricingHeader>
 

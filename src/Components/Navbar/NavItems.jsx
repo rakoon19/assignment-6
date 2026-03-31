@@ -1,10 +1,13 @@
 import React from 'react';
 
-const NavItems = ({item}) => {
+const NavItems = ({ item, id, handleNavClick, mobile }) => {
     return (
-        <>
-          <li><a href="">{item}</a></li>  
-        </>
+        <li 
+            className={`list-none cursor-pointer ${mobile ? 'px-6 py-3 hover:bg-gray-50' : 'hover:text-blue-600 transition-colors'}`}
+            onClick={() => handleNavClick(id)}
+        >
+            <span className="text-sm font-medium">{item}</span>
+        </li>
     );
 };
 
