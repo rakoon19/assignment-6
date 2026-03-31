@@ -7,7 +7,7 @@ return (
         <div className='flex flex-col md:flex-row items-center gap-8 md:gap-15 justify-center w-full py-10 md:py-21 px-4 md:px-10'>
         
             <div className='flex-1 w-full md:max-w-137.5 order-2 md:order-1'> 
-                <img src="/public/assets/banner.png" alt="banner" className="w-full h-auto rounded-2xl" />
+                <img src="/assets/banner.png" alt="banner" className="w-full h-auto rounded-2xl" />
             </div>
             
             <div className='w-full md:max-w-159.75 order-1 md:order-2'>

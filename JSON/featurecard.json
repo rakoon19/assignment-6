@@ -3,7 +3,7 @@
       "id": 1,
       "name": "AI Writing Pro",
       "badge": "Best Seller",
-      "icon": "/public/assets/writing_2327400 1.png",
+      "icon": "/assets/writing_2327400 1.png",
       "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
       "price": {
         "amount": 29,
@@ -20,7 +20,7 @@
       "id": 2,
       "name": "Design Templates Pack",
       "badge": "Popular",
-      "icon": "/public/assets/design-tool.png",
+      "icon": "/assets/design-tool.png",
       "description": "2000+ premium templates for social media, presentations, and marketing materials.",
       "price": {
         "amount": 49,
@@ -37,7 +37,7 @@
       "id": 3,
       "name": "Premium Stock Assets",
       "badge": "New",
-      "icon": "/public/assets/writing_2327400 1.png",
+      "icon": "/assets/writing_2327400 1.png",
       "description": "Access millions of royalty-free photos, videos, and graphics for your projects.",
       "price": {
         "amount": 19,
@@ -54,7 +54,7 @@
       "id": 4,
       "name": "Automation Toolkit",
       "badge": "Popular",
-      "icon": "/public/assets/operation.png",
+      "icon": "/assets/operation.png",
       "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
       "price": {
         "amount": 79,
@@ -71,7 +71,7 @@
       "id": 5,
       "name": "Resume Builder Pro",
       "badge": "New",
-      "icon": "/public/assets/portfolio.png",
+      "icon": "/assets/portfolio.png",
       "description": "Create professional resumes and cover letters that land interviews.",
       "price": {
         "amount": 15,
@@ -88,7 +88,7 @@
       "id": 6,
       "name": "Social Media Content Kit",
       "badge": "Best Seller",
-      "icon": "/public/assets/social-media.png",
+      "icon": "/assets/social-media.png",
       "description": "Complete toolkit for creating engaging social media content across all platforms.",
       "price": {
         "amount": 39,
