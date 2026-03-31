@@ -3,7 +3,7 @@ import FeatureCard from "./FeatureCard";
 import Cart from "../Cart/Cart";
 import featurecard from '../../../JSON/featurecard.json'
 
-const Feature = () => {
+const Feature = ({ setFeatureBTN, featureBTN }) => {
     const [cart, setCart] = useState([]);
 
     const handleBuyNow = (card) => {
@@ -16,13 +16,21 @@ const Feature = () => {
                 <h1>Premium Digital Tools</h1>
                 <p>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
                 <div className="flex">
-                    <button>Products</button>
-                    <button>Cart ({ cart.length })</button>
+                    <button onClick={() => setFeatureBTN('products')}>Products</button>
+                    <button onClick={() => setFeatureBTN('cart')}>Cart ({cart.length})</button>
                 </div>
             </div>
             <div className="grid grid-cols-3 gap-7.5">
-            { featurecard.map((card) => (<FeatureCard card={ card } key={ card.id } handleBuyNow={ handleBuyNow}></FeatureCard>))}
-            <Cart cart={ cart } setCart= { setCart }></Cart>
+
+            { featureBTN === 'products' && 
+                (
+                <>
+                { featurecard.map((card) => (<FeatureCard card={ card } key={ card.id } handleBuyNow={ handleBuyNow}></FeatureCard>))} 
+                </> )
+            }
+
+            { featureBTN === 'cart' && (<Cart cart={ cart } setCart= { setCart }></Cart>)}
+
             </div>
         </div>
     );

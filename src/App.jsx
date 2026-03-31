@@ -1,5 +1,6 @@
 // import { useState } from 'react'
 import './App.css'
+import { useState } from 'react'
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import About from './Components/About/About'
@@ -12,12 +13,13 @@ import Footer from './Components/Footer/Footer'
 
 
 function App() {
+  const [featureBTN, setFeatureBTN] = useState('products')
   return (
     <>
     <Navbar></Navbar>
     <Hero></Hero>
     <About></About>
-    <Feature></Feature>
+    <Feature setFeatureBTN={ setFeatureBTN } featureBTN={ featureBTN }></Feature>
     <Cart></Cart>
     <Step></Step> 
     <Pricing></Pricing>
