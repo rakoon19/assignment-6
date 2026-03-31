@@ -1,19 +1,19 @@
 [
     {
       "serialNo": "01",
-      "imgPath": "../../../public/assets/user.png",
+      "imgPath": "src/assets/user.png",
       "heading": "Create Account",
       "para": "Sign up for free in seconds. No credit card required to get started."
     },
     {
       "serialNo": "02",
-      "imgPath": "../../../public/assets/package.png",
+      "imgPath": "src/assets/package.png",
       "heading": "Choose Products",
       "para": "Browse our catalog and select the tools that fit your needs."
     },
     {
       "serialNo": "03",
-      "imgPath": "../../../public/assets/rocket.png",
+      "imgPath": "src/assets/rocket.png",
       "heading": "Start Creating",
       "para": "Download and start using your premium tools immediately."
     }

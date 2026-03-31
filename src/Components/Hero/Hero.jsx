@@ -1,4 +1,4 @@
-import banner from '/public/assets/banner.png'
+import banner from '../../assets/banner.png'
 import PrimaryButton from '../ui Components/PrimaryButton'
 import { TbLivePhotoFilled } from "react-icons/tb";
 import { LuPlay } from "react-icons/lu";
