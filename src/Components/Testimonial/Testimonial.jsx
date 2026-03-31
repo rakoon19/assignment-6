@@ -17,11 +17,11 @@ const Testimonial = () => {
             <div className='flex flex-col gap-4'>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 
-                        <button className="px-6 py-2 rounded-full bg-white text-purple-600 font-medium hover:bg-linear-to-r from-[#6366F1] via-[#8B5CF6] to-[#c681d0] hover:text-white transition">
+                        <button className="w-fit self-center px-6 py-2 rounded-full bg-white text-purple-600 font-medium hover:bg-linear-to-r from-[#6366F1] via-[#8B5CF6] to-[#c681d0] hover:text-white transition">
                         Explore Products
                         </button>
 
-                        <button className="px-6 py-2 rounded-full border border-white text-white font-medium hover:bg-white hover:text-purple-600 transition">
+                        <button className="w-fit self-center px-6 py-2 rounded-full border border-white text-white font-medium hover:bg-white hover:text-purple-600 transition">
                             View Pricing
                         </button>
                 </div>

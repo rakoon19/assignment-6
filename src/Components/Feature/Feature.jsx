@@ -28,18 +28,18 @@ const Feature = ({ setFeatureBTN, featureBTN, cart, setCart }) => {
                     Choose from our curated collection of premium digital products designed to boost your productivity and creativity.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center p-1 rounded-full bg-gray-100 w-full sm:w-fit items-center self-center">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center p-2 rounded-2xl bg-gray-100 w-fit items-center self-center">
 
                     <button 
                         onClick={() => setFeatureBTN('products')} 
-                        className={`w-full sm:w-auto py-3 md:py-4 px-6 md:px-10 rounded-full font-bold transition-all ${featureBTN === 'products' ? 'bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white shadow-lg' : 'bg-gray-100 text-[#627382]'}`}
+                        className={`w-fit sm:w-auto py-3 md:py-4 px-6 md:px-10 rounded-full font-bold transition-all ${featureBTN === 'products' ? 'bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white shadow-lg' : 'bg-gray-100 text-[#627382]'}`}
                     >
                         Products
                     </button>
                     
                     <button 
                         onClick={() => setFeatureBTN('cart')}
-                        className={`w-full sm:w-auto py-3 md:py-4 px-6 md:px-10 rounded-full font-bold transition-all ${featureBTN === 'cart' ? 'bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white shadow-lg' : 'bg-gray-100 text-[#627382]'}`}
+                        className={`w-fit sm:w-auto py-3 md:py-4 px-6 md:px-10 rounded-full font-bold transition-all ${featureBTN === 'cart' ? 'bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white shadow-lg' : 'bg-gray-100 text-[#627382]'}`}
                     >
                         Cart ({cart.length})
                     </button>

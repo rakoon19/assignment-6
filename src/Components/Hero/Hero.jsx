@@ -34,11 +34,11 @@ return (
                         </p>
                     </div>
                     
-                    <div className='flex flex-col sm:flex-row gap-3 md:gap-4 mt-2 md:mt-4 w-full sm:w-auto'>
+                    <div className='flex flex-col md:flex-row items-center gap-3 md:gap-4 mt-2 md:mt-4 w-full sm:w-auto'>
 
                         <PrimaryButton btnText={'Explore Products'} />
 
-                        <button className="flex items-center gap-2 px-6 py-3 border border-purple-500 rounded-full text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-colors duration-300">
+                        <button className="w-fit flex items-center gap-2 px-6 py-3 border border-purple-500 rounded-full text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-colors duration-300">
                         <LuPlay size={18} strokeWidth={2.5} />
                         
                         <span>Watch Demo</span>
