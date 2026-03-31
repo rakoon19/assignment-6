@@ -2,7 +2,7 @@
 
 const Copyright = () => {
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-between text-[#fafafa50]">
             <p>© 2026 Digitools. All rights reserved.</p>
             <ul className="flex justify-between gap-4">
                 <li><a href="#">Privacy Policy</a></li>

@@ -8,14 +8,14 @@ const FooterPaths = () => {
         <div className='flex justify-between self-center'>
 
             <div className='flex flex-col gap-4'>
-                <h2>DigiTools</h2>
-                <p>Premium digital tools for creators,<br /> professionals, and businesses. Work smarter <br /> with our suite of powerful tools.</p>
+                <h2 className='text-4xl font-bold'>DigiTools</h2>
+                <p className="opacity-80">Premium digital tools for creators,<br /> professionals, and businesses. Work smarter <br /> with our suite of powerful tools.</p>
             </div>
 
             { footerlink.map((item) => (<FooterLink item={ item } key={ item.id }></FooterLink>))}
 
             <div className='flex flex-col gap-4'>
-                <h2>Social Links</h2>
+                <h2 className='text-xl font-medium'>Social Links</h2>
                 <SocialLinks></SocialLinks>
             </div>
 

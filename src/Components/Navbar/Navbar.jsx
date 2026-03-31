@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <div className='flex justify-between py-4'>
-            <h2 className='text-4xl'>DigiTools</h2>
+            <h2 className='text-4xl font-bold'>DigiTools</h2>
             <ul className='flex gap-8 self-center justify-center'>
                 { navItems.map(
                     (item, index) => (<NavItems item={item} key={index}></NavItems>))}
