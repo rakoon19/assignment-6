@@ -27,13 +27,14 @@ const Cart = ({ cart = [], setCart}) => {
                 ))} 
             </div>
 
-            <div>
+            <div className="flex justify-between">
                 <p>Total:</p>
-                <div>
+                <div className="flex">
                     <p>{ currency }</p>
                     <p>{ total }</p>
                 </div>
             </div>
+            <button>Proceed to Checkout</button>
         </div>
     )}
 
