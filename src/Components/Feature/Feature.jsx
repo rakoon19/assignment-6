@@ -7,17 +7,18 @@ const Feature = ({ setFeatureBTN, featureBTN }) => {
     const [cart, setCart] = useState([]);
 
     const handleBuyNow = (card) => {
-        setCart([...cart, card])
+        setCart([...cart, card]);
+        alert('Product added to cart!');
     }
     return (
-        <div className="py-30">
+        <div className="py-30 space-y-12">
 
             <div className="flex flex-col gap-4"> 
                 
                 <h1 className="text-[#101727] text-5xl font-extrabold text-center   ">Premium Digital Tools</h1>
                 <p className="text-[#627382] text-center">Choose from our curated collection of premium digital products designed <br />to boost your productivity and creativity.</p>
 
-                <div className="flex gap-4 justify-center">
+                <div className="flex gap-4 justify-center p-1 rounded-full bg-gray-100 w-fit items-center self-center">
                     <button 
                         onClick={() => setFeatureBTN('products')} 
                         className={`py-4 px-10 rounded-full font-bold transition-all ${featureBTN === 'products' ? 'bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white shadow-lg' : 'bg-gray-100 text-[#627382]'}`}
@@ -40,7 +41,7 @@ const Feature = ({ setFeatureBTN, featureBTN }) => {
             { featureBTN === 'products' && 
                 (
                 <>
-                { featurecard.map((card) => (<FeatureCard card={ card } key={ card.id } handleBuyNow={ handleBuyNow}></FeatureCard>))} 
+                { featurecard.map((card) => (<FeatureCard card={ card } key={ card.id } handleBuyNow={ handleBuyNow} cart={cart}></FeatureCard>))} 
                 </> )
             }
             </div>

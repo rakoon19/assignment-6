@@ -1,59 +1,14 @@
-// import React from 'react';
-
-// const FeatureCard = ({ card, handleBuyNow}) => {
-
-
-//     if (card.length === 0) {
-//         return (
-//             <div>
-//                 <h2>No Products Available</h2>
-//                 <p>There are no available products to buy.</p>
-//             </div>
-//         );
-//     }
-//     return (
-//         <div className='flex flex-col'>
-
-//             <p>{ card.badge }</p>
-//             <img src={ card.icon } alt="" />
-//             <h4>{ card.name }</h4>
-//             <p>{ card.description }</p>
-
-//             <span className='flex'>
-//                 <p>{ card.price.currency }</p>
-//                 <p>{ card.price.amount }</p>
-//                 <p>/{ card.price.billing }</p>
-//             </span>
-
-//             <div>
-//                 { card.features.map((feature, index) => (<p key={ index }>{ feature }</p>))}
-//             </div>
-
-//             <button onClick={() => { handleBuyNow(card) }}>Buy Now</button>
-//         </div>
-//     );
-// };
-
-// export default FeatureCard;
-
-
-
-
-
-
-
-
-
-
-
-
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCheck } from "react-icons/fa6";
+import { BsCheckCircleFill } from 'react-icons/bs';
 
-const FeatureCard = ({ card, handleBuyNow }) => {
+const FeatureCard = ({ card, handleBuyNow, cart }) => { 
+    const [added, setAdded] = useState(false);
+    
     if (!card) return null;
 
-    // Logic to determine badge colors based on the text
+    const isInCart = cart.some(item => item.id === card.id); 
+
     const getBadgeStyles = (badge) => {
         switch (badge) {
             case 'Best Seller':
@@ -67,8 +22,15 @@ const FeatureCard = ({ card, handleBuyNow }) => {
         }
     };
 
+    const handleClick = () => {
+        if (isInCart) return; 
+        handleBuyNow(card);
+        setAdded(true);
+        setTimeout(() => setAdded(false), 2000);
+    };
+
     return (
-        <div className='relative flex flex-col p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-all duration-300 w-full h-full'>
+        <div className='relative flex flex-col p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 w-full h-full'>
             
             {card.badge && (
                 <span className={`absolute top-6 right-6 px-3 py-1 rounded-full text-xs font-bold ${getBadgeStyles(card.badge)}`}>
@@ -106,10 +68,29 @@ const FeatureCard = ({ card, handleBuyNow }) => {
             </div>
 
             <button 
-                onClick={() => handleBuyNow(card)}
-                className='w-full py-4 rounded-full bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white font-bold text-lg hover:opacity-90 transition-opacity active:scale-95'
+                onClick={handleClick}
+                disabled={isInCart} 
+                className={`w-full py-4 rounded-full text-white font-bold text-lg transition-all active:scale-95 flex items-center justify-center gap-2 ${
+                    isInCart
+                        ? 'bg-gray-400 cursor-not-allowed'
+                        : added 
+                            ? 'bg-green-500 hover:bg-green-600' 
+                            : 'bg-linear-to-r from-[#7C3AED] to-[#A855F7] hover:opacity-90'
+                }`}
             >
-                Buy Now
+                {isInCart ? (
+                    <>
+                        <BsCheckCircleFill className="text-xl" />
+                        In Cart
+                    </>
+                ) : added ? (
+                    <>
+                        <BsCheckCircleFill className="text-xl" />
+                        Added to Cart
+                    </>
+                ) : (
+                    'Buy Now'
+                )}
             </button>
         </div>
     );

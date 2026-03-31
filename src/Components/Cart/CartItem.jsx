@@ -19,7 +19,10 @@ const CartItem = ({ item, handleRemove }) => {
 
             <div>
                 <button 
-                    onClick={() => handleRemove(item.id)}
+                    onClick={() => {
+                        handleRemove(item.id);
+                        alert('Product removed from cart!');
+                    }}
                     className='text-[#F43F5E] font-semibold hover:text-red-700 transition-colors text-sm px-2'
                 >
                     Remove
