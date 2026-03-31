@@ -5,7 +5,6 @@ const Cart = ({ cart = [], setCart}) => {
         setCart(cart.filter(item => item.id !== id));
     }
     const total = cart?.reduce((sum, item) => sum + item.price.amount, 0);
-    const currency = '$';
 
 
     if (cart.length === 0) {
@@ -26,16 +25,16 @@ const Cart = ({ cart = [], setCart}) => {
                     <CartItem item={item} key={item.id} handleRemove={ handleRemove }/>
                 ))} 
             </div>
-
-            <div className="flex justify-between">
-                <p>Total:</p>
-                <div className="flex">
-                    <p>{ currency }</p>
-                    <p>{ total }</p>
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                    <div className="flex justify-between items-center mb-6">
+                        <span className="text-gray-400">Total:</span>
+                        <span className="text-3xl font-extrabold text-[#101727]">${total}</span>
+                    </div>
+                    <button className="w-full py-4 rounded-full bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white font-bold text-lg shadow-lg">
+                        Proceed To Checkout
+                    </button>
                 </div>
             </div>
-            <button>Proceed to Checkout</button>
-        </div>
     )}
 
 

@@ -30,7 +30,7 @@ const PricingCard = ({ card }) => {
             <ul className="flex-1 space-y-4 mb-10">
                 {card.features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-3 text-sm">
-                        <FaCheck 
+                        <FaCheck
                             size={20} 
                             strokeWidth={3}
                             className={`shrink-0 ${isPopular ? 'text-white' : 'text-green-500'}`} 
