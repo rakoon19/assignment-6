@@ -1,4 +1,5 @@
 import CartItem from "./CartItem";
+import { LuShoppingCart } from "react-icons/lu";
 
 const Cart = ({ cart = [], setCart}) => {
     const handleRemove = (id) => {
@@ -9,9 +10,12 @@ const Cart = ({ cart = [], setCart}) => {
 
     if (cart.length === 0) {
         return (
-            <div>
-                <h2>Your Cart</h2>
-                <p>Your cart is empty</p>
+            <div className='bg-white'>
+                <h2 className="font-bold text-2xl">Your Cart</h2>
+                    <div className="flex justify-center items-center flex-col gap-4">
+                        <LuShoppingCart size={100} className='text-[#627382]'/>
+                        <p className='text-[#627382]'>Your cart is empty</p>
+                    </div>
             </div>
         );
     }
