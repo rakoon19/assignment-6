@@ -20,7 +20,6 @@ function App() {
     <Hero></Hero>
     <About></About>
     <Feature setFeatureBTN={ setFeatureBTN } featureBTN={ featureBTN }></Feature>
-    <Cart></Cart>
     <Step></Step> 
     <Pricing></Pricing>
     <Testimonial></Testimonial>

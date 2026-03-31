@@ -2,6 +2,15 @@ import React from 'react';
 
 const FeatureCard = ({ card, handleBuyNow}) => {
 
+
+    if (card.length === 0) {
+        return (
+            <div>
+                <h2>No Products Available</h2>
+                <p>There are no available products to buy.</p>
+            </div>
+        );
+    }
     return (
         <div className='flex flex-col'>
 

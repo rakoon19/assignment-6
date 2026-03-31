@@ -28,12 +28,19 @@ const Feature = ({ setFeatureBTN, featureBTN }) => {
                 { featurecard.map((card) => (<FeatureCard card={ card } key={ card.id } handleBuyNow={ handleBuyNow}></FeatureCard>))} 
                 </> )
             }
+            </div>
 
             { featureBTN === 'cart' && (<Cart cart={ cart } setCart= { setCart }></Cart>)}
 
-            </div>
+            
         </div>
     );
 };
 
 export default Feature;
+
+
+
+
+
+
