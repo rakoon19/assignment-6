@@ -1,6 +1,7 @@
 import React from 'react';
 
-const FeatureCard = ({ card }) => {
+const FeatureCard = ({ card, handleBuyNow}) => {
+
     return (
         <div className='flex flex-col'>
 
@@ -19,7 +20,7 @@ const FeatureCard = ({ card }) => {
                 { card.features.map((feature, index) => (<p key={ index }>{ feature }</p>))}
             </div>
 
-            <button>Buy Now</button>
+            <button onClick={() => { handleBuyNow(card) }}>Buy Now</button>
         </div>
     );
 };

@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import About from './Components/About/About'
 import Feature from './Components/Feature/Feature'
+import Cart from './Components/Cart/Cart'
 import Step from './Components/Step/Step'
 import Pricing from './Components/Pricing/Pricing'
 import Testimonial from './Components/Testimonial/Testimonial'
@@ -17,6 +18,7 @@ function App() {
     <Hero></Hero>
     <About></About>
     <Feature></Feature>
+    <Cart></Cart>
     <Step></Step> 
     <Pricing></Pricing>
     <Testimonial></Testimonial>

@@ -1,7 +1,14 @@
+import { useState } from "react";
 import FeatureCard from "./FeatureCard";
+import Cart from "../Cart/Cart";
 import featurecard from '../../../JSON/featurecard.json'
 
 const Feature = () => {
+    const [cart, setCart] = useState([]);
+
+    const handleBuyNow = (card) => {
+        setCart([...cart, card])
+    }
     return (
         <div>
 
@@ -10,11 +17,12 @@ const Feature = () => {
                 <p>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
                 <div className="flex">
                     <button>Products</button>
-                    <button>Cart (2)</button>
+                    <button>Cart ({ cart.length })</button>
                 </div>
             </div>
             <div className="grid grid-cols-3 gap-7.5">
-            { featurecard.map((card) => (<FeatureCard card={ card } key={ card.id }></FeatureCard>))}
+            { featurecard.map((card) => (<FeatureCard card={ card } key={ card.id } handleBuyNow={ handleBuyNow}></FeatureCard>))}
+            <Cart cart={ cart } setCart= { setCart }></Cart>
             </div>
         </div>
     );
