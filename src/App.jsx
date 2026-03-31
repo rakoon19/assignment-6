@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import About from './Components/About/About'
+import Feature from './Components/Feature/Feature'
 import Step from './Components/Step/Step'
 import Pricing from './Components/Pricing/Pricing'
 import Testimonial from './Components/Testimonial/Testimonial'
@@ -15,8 +16,7 @@ function App() {
     <Navbar></Navbar>
     <Hero></Hero>
     <About></About>
-    {/* <Feature></Feature>
-    <FeatureCard></FeatureCard> */}
+    <Feature></Feature>
     <Step></Step> 
     <Pricing></Pricing>
     <Testimonial></Testimonial>
