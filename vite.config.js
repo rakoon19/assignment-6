@@ -8,5 +8,5 @@ export default defineConfig({
   [  react(),
      tailwindcss()
     ],
-  base: "/assignment-6/",
+  base: "./",
 })
