@@ -47,10 +47,13 @@ const Navbar = ({ cart = [], setFeatureBTN }) => {
                 </ul>
 
                 <div className='hidden md:flex items-center gap-6'>
-                    <button onClick={handleCartClick} className="relative">
+                    <button 
+                        onClick={handleCartClick} 
+                        className="relative p-3 -m-3"
+                    >
                         <LuShoppingCart className='w-6 h-6'/>
                         {cart.length > 0 && (
-                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full">
+                            <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-semibold min-w-5 h-5 px-1.5 flex items-center justify-center rounded-full">
                                 {cart.length}
                             </span>
                         )}
@@ -60,8 +63,13 @@ const Navbar = ({ cart = [], setFeatureBTN }) => {
                 </div>
 
                 <div className="flex gap-4 md:hidden items-center">
-                    <button onClick={handleCartClick} className="relative">
+                    <button onClick={handleCartClick} className="relative p-2 -m-2">
                         <LuShoppingCart size={24} />
+                        {cart.length > 0 && (
+                            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-semibold min-w-[18px] h-[18px] px-1 flex items-center justify-center rounded-full">
+                                {cart.length}
+                            </span>
+                        )}
                     </button>
                     <button onClick={() => setIsOpen(!isOpen)}>
                         {isOpen ? <LuX size={28} /> : <LuMenu size={28} />}

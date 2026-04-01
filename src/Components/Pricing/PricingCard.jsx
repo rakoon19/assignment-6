@@ -41,9 +41,9 @@ const PricingCard = ({ card }) => {
                 ))}
             </ul>
 
-            <button className={`w-full py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-all 
+            <button className={` w-xs py-3 md:py-4 rounded-full font-bold text-base md:text-lg transition-all 
                 ${isPopular 
-                    ? 'bg-white text-[#7C3AED] hover:bg-opacity-90' 
+                    ? 'bg-white text-[#7C3AED] hover:text-white hover:bg-linear-to-r from-[#7C3AED] to-[#A855F7] transform' 
                     : 'bg-linear-to-r from-[#7C3AED] to-[#A855F7] text-white hover:opacity-90'}`}>
                 {card.buttonText}
             </button>

@@ -5,7 +5,7 @@ import FooterLink from './FooterLink';
 
 const FooterPaths = () => {
     return (
-        <div className='flex flex-col md:flex-row md:justify-between gap-10'>
+        <div className='flex flex-col max-w-7xl mx-auto md:flex-row md:justify-between gap-10'>
 
             <div className='flex flex-col gap-4'>
                 <h2 className='text-2xl sm:text-3xl md:text-4xl font-bold'>DigiTools</h2>
