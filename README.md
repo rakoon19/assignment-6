@@ -1,16 +1,41 @@
-# React + Vite
+📌 Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DigiTools
 
-Currently, two official plugins are available:
+🧾 About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+DigiTools Tech is a modern e-commerce shopping cart application designed for digital tools and resources. It features a clean and responsive interface with real-time cart management and interactive toast notifications, providing a smooth and user-friendly shopping experience.
 
-## React Compiler
+The project focuses on building a strong foundation in React development while implementing modern UI/UX practices and component-based architecture.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚙️ Technologies Used
+React.js
+Tailwind CSS
+DaisyUI
+JavaScript (ES6+)
+React-Toastify (NPM Package)
+JSON (for product data)
+🌟 Key Features
+🎯 Intuitive Product Browsing
 
-## Expanding the ESLint configuration
+Explore digital tools through a clean and elegant card-based interface with detailed product information and quick add-to-cart functionality.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛒 Smart Shopping Cart System
+
+Real-time cart updates with automatic total calculation. Users can add or remove items instantly with smooth UI interactions and visual feedback.
+
+🔔 Interactive User Notifications
+
+Modern toast notifications powered by React-Toastify provide instant feedback for cart actions without interrupting the user experience.
+
+🎯 Project Purpose
+
+The sole purpose of creating this project is to build a strong foundation in React development. Through DigiTools Tech, I'm mastering essential concepts like UI development, components, props, state management, data fetching, and code reusability.
+
+🌐 Live Demo
+
+🚀 Surge Live:
+https://rakoon-6-ph.surge.sh
+
+🚀 Vercel Live:
+https://assignment-6-blue.vercel.app
