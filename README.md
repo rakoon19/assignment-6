@@ -39,3 +39,6 @@ https://rakoon-6-ph.surge.sh
 
 🚀 Vercel Live:
 https://assignment-6-blue.vercel.app
+
+🚀 Netlify Live:
+https://rakoon-6-ph.netlify.app
